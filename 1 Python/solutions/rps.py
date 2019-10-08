@@ -1,5 +1,4 @@
 import random
-import itertools
 
 def main():
     valid_moves = ['rock', 'paper', 'scissors']
