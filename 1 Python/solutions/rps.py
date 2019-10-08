@@ -13,8 +13,8 @@ def main():
         user_move = input('choose your weapon (q to quit): ').lower()
 
         computer_move = random.choice(valid_moves)
-        moves = tuple((user_move, computer_move))
-
+        moves = (user_move, computer_move)
+		print(moves)
         if user_move not in valid_moves:
             print('invalid move\n')
         elif user_move == computer_move:

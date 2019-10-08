@@ -36,7 +36,7 @@ def main():
     get_numbers(n_numbers, password)
     get_specials(n_specials, password)
 
-    # print(f'{"".join(password)}')
+    print(f'{"".join(password)}')
     print(f'\n{"".join(random.sample(password, k=len(password)))}\n')
     
 
