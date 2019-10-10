@@ -18,3 +18,5 @@ def main():
 
             print('too high') if current_guess > number else print('too low')
         play_again = input('play again? (y/n): ').lower()
+
+main()
