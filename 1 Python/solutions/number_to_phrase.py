@@ -58,7 +58,7 @@ def main():
         else:
             num_text = f'{tens[tens_digit]}-{ones[ones_digit]}'
 
-        print(f'{num_text}')
+        print(num_text)
 
 main()
 
