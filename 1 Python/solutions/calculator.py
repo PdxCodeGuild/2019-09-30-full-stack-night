@@ -20,8 +20,7 @@ def main():
 
     while True:
         operator = input('enter operation (q to quit): ').lower()
-        if operator == 'q':
-            break
+        if operator == 'q': break
         l_operand = int(input('enter left operand: '))
         r_operand = int(input('enter right operand: '))
 

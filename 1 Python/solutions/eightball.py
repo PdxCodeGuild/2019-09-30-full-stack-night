@@ -28,7 +28,6 @@ def main():
         question = input('\nwhat would you ask of the oracle? ')
         print(f'\n{random.choice(messages)} \n')
         proceed = input('would you like to asuage more doubts? (y/n)').lower()
-        if proceed == 'n':
-            break
+        if proceed == 'n': break
 
 main()

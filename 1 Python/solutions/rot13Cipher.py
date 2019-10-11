@@ -12,11 +12,10 @@ def cipher_string_rotation(a_string, rotation_amount = 13):
 
 def main():    
     while True:
-        rotation = input('enter rotation (enter a \'q\' to quit): ')
+        rotation = input('enter rotation (q to quit): ')
         if rotation == 'q': break
-        rotation = int(rotation)
         user_string = get_user_input('enter text to encode (enter a \'q\' to quit): ').lower()
-        encoded_user_string = cipher_string_rotation(user_string, rotation)
+        encoded_user_string = cipher_string_rotation(user_string, int(rotation))
         print(encoded_user_string)
         
 main()

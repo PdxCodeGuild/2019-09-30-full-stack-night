@@ -61,8 +61,7 @@ def main(test):
                 print(convert(num))
             return
         user_input = input('enter number (q to quit): ')
-        if user_input == 'q':
-            break
+        if user_input == 'q': break
         print(convert(int(user_input)))
 
 main(False)
