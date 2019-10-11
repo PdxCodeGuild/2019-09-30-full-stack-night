@@ -19,7 +19,7 @@ def main():
 
     user_input_split = user_input.split(" ")
 
-    value = int(user_input_split[0])
+    value = float(user_input_split[0])
     unit = user_input_split[1]
 
     print(f'\n{value} {unit} is {convert_units((value, unit, convert_to_unit))} {convert_to_unit}.\n')
