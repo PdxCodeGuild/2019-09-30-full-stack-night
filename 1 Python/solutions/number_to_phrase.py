@@ -1,13 +1,7 @@
-def main():
-    for x in range(1, 100):
-        # x = input('enter number (q to quit): ')
-        # if x == 'q':
-        #     break
+def convert(number):
 
-        x= int(x)
-
-        tens_digit = x // 10
-        ones_digit = x % 10
+        tens_digit = number // 10
+        ones_digit = number % 10
 
         ones = [
             '',
@@ -58,7 +52,17 @@ def main():
         else:
             num_text = f'{tens[tens_digit]}-{ones[ones_digit]}'
 
-        print(num_text)
+        return num_text
 
-main()
+def main(test):
+    while True:
+        if test == True:
+            for num in range(1, 100):
+                print(convert(num))
+            return
+        user_input = input('enter number (q to quit): ')
+        if user_input == 'q':
+            break
+        print(convert(int(user_input)))
 
+main(False)
