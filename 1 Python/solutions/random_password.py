@@ -2,7 +2,9 @@ import random
 import string
 
 # char_set = string.ascii_letters + string.digits + string.punctuation
+# password = ''.join([random.choice(char_set) for i in range(20)])
 
+print(password)
 def get_lowercase_letters(n_letters, password):
     for i in range(0, n_letters):
         password.append(random.choice(string.ascii_lowercase))
