@@ -14,7 +14,7 @@ def main():
             current_guess = int(current_guess)
 
 
-            print(current_guess, previous_guess, number)
+            # print(current_guess, previous_guess, number)
             print('too high') if current_guess > number else print('too low')
             n_guesses += 1
             if current_guess == number: 
