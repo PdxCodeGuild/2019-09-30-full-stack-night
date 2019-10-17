@@ -1,4 +1,4 @@
-# Lab 27: Connect Four
+# Lab Connect Four
 
 [Connect Four](https://en.wikipedia.org/wiki/Connect_Four) is a board game.
 Players take turns placing tokens of their color into a vertical grid.

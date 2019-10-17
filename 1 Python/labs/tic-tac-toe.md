@@ -1,57 +1,72 @@
-# Lab 27: Connect Four
+# Lab Tic-Tac-Toe 
 
-[Connect Four](https://en.wikipedia.org/wiki/Connect_Four) is a board game.
-Players take turns placing tokens of their color into a vertical grid.
-They drop to the bottom, and if anyone has four of their color in a straight line, they've won!
+[Tic Tac Toe](https://en.wikipedia.org/wiki/Tic-tac-toe) is a game.
+Players take turns placing tokens (a 'O' or 'X') into a 3x3 grid.
+Whoever gets three in a row first wins.
 
-Define a module that simulates a Connect Four game.
-
-This will consist of the following classes:
-
-`Player`:
-- Properties
-    - `name`
-    - `color`
-        
-`Game`:
-- Properties
-    - `board`: 7x6 board representation
-
-- Methods
-    - `get_height(position)`: returns int of how many pieces occupy a column 
-    - `move(player, position)`: adds a player token to a column after figuring out the current height of the column 
-    - `calc_winner()`: returns true if a match (four in a row) is found 
-    - `is_full()`: returns true if all board positions are occupied 
-    - `is_game_over()`: returns true if the game is over (a winner is found or the board is full)
+You will write a **Player** class and **Game** class to model Tic Tac Toe, and a function **main** that models gameplay taking in user inputs through REPL.
 
 
-Create a program that simulates the _just playing moves_ of an existing Connect Four game.
-Do not concern yourself with figuring out who has won.
+The Player class has the following properties: 
+* **name** = *player name*
+* **token** = *'X' or 'O'*
 
-It will read a file that contains a history of the moves in a game.
-Assume the playing board is made of columns numbered 1 through 7.
-The file will have one line for each move (players alternate).
-The number in that line is the column the current player placed a token in.
+The Game class has the following properties:
+* **board** = *your representation of the board*
 
-Use the following [example move file](./connect_four/connect-four-moves.txt).
-Save it in something like `connect-four-moves.txt`
-This moves file recreates [this game](https://en.wikipedia.org/wiki/File:Connect_Four.gif).
+You can represent the board however you like, such as a 2D list, tuples, or dictionary.
 
-*   Think about how to figure out how far that token will fall in a given column.
+The Game class has the following methods:
+* `__repr__()` Returns a pretty string representation of the game board
+```py
+>>> print(board)
+X| | 
+O|X|O
+ | | 
+```
 
-*   Think about how to place a token in a column.
+* `move(x, y, player)` Place a player's token character string at a given coordinate (top-left is 0, 0), x is horizontal position, y is vertical position.
 
-*   Think about how to concisely store the tokens that have been dropped in the board.
+```py
+>>> board.move(2, 1, player_1)
+ | | 
+ | |X
+ | | 
+```
 
-*   Read in moves from the file.
+* `calc_winner()` What token character string has won or `None` if no one has.
 
-*   After each move, print out a representation of the board.
-    You can use `R` and `Y` to represent the pieces.
+```py
+X| | 
+O|X|O
+ | |X
+>>> board.calc_winner()
+X
+```
 
-## Version 2
+* `is_full()` Returns true if the game board is full.
 
-*   Once all moves are done, also print out what player, if any, won.
+```py
+X|O|X
+X|X|O
+O|O|X
+>>> board.is_full()
+True
+```
 
-## Version 3
+* `is_game_over()` Returns true if the game board is full or a player has won.
 
-*   Make game playable
+```py
+X|O|X
+X|X|O
+O|O|X
+>>> board.is_game_over()
+True
+
+X|O|
+ | |X
+ | |
+>>> board.is_game_over()
+False
+```
+
