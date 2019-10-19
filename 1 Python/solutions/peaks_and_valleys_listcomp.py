@@ -1,7 +1,7 @@
 def peaks(data, indices):
     return [i for i in [i for i in indices if (i - 1) in indices and (i + 1) in indices] if data[i] >= data[i - 1] and data[i] >= data[i + 1]]
 
-def valleys(data,indices):
+def valleys(data, indices):
     return [i for i in [i for i in indices if (i - 1) in indices and (i + 1) in indices] if data[i] <= data[i - 1] and data[i] <= data[i + 1]]
 
 def peaks_and_valleys(peaks, valleys):
