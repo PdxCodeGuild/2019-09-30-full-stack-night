@@ -1,3 +1,5 @@
+import functools
+
 def main():
     numbers = []
     while True:
@@ -5,9 +7,7 @@ def main():
         if user_input == 'q': break
         numbers.append(int(user_input))
 
-    number_sum = 0
-    for number in numbers:
-        number_sum += number
+    number_sum = functools.reduce(lambda a, x: a + x, numbers)
 
     print(number_sum / len(numbers))
 
