@@ -1,6 +1,6 @@
 
 
-# Lab 5: Random Redirector
+# Lab 3: Random Redirector
 
 Create a page which randomly redirectly to another. Create an array of urls (as strings), and randomly pick one using `Math.random()`. Then redirect to the page using [window.location](https://developer.mozilla.org/en-US/docs/Web/API/Window/location).
 

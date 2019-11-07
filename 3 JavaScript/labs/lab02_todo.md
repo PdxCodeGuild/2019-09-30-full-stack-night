@@ -1,5 +1,5 @@
 
-# Lab 4: Todo List
+# Lab 2: Todo List
 
 Let's make a simple todo-list which supports the following operations:
 
