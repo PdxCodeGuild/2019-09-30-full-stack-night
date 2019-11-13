@@ -68,6 +68,13 @@ button:hover {
     height: 100%;
 }
 
+@media screen and (max-width: 950px) {
+    .equal-sign {
+        background-color: yellow;
+        color: black;
+    }
+}
+
 .calculator-keys {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

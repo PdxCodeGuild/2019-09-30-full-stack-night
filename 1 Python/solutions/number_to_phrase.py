@@ -17,6 +17,19 @@ def convert(number):
             'ten'
         ]
 
+        tens = [
+            '',
+            'ten',
+            'twenty',
+            'thirty',
+            'forty',
+            'fifty',
+            'sixty',
+            'seventy',
+            'eighty',
+            'ninety',
+        ]
+
         teens = [
             'ten',
             'eleven',
@@ -30,9 +43,9 @@ def convert(number):
             'nineteen'
         ]
 
-        tens = [
+        hundreds = [
             '',
-            'ten',
+            'one hundred',
             'twenty',
             'thirty',
             'forty',
