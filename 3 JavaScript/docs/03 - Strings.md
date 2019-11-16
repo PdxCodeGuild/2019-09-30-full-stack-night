@@ -72,4 +72,17 @@ function showYourWork(num1, num2) {
 showYourWork(3, 4)
 ```
 
+## reversing strings
+there are several ways to reverse strings in javascript. it is usually a little more work than pyhton. here is one example that converts a string to an array, reverses the array, then joins the elements of the array back together into a string.
+
+```javascript
+const lowerLetters = 'abcdefghijklmnopqrstuvwxyz';
+let revLowerLetters = lowerLetters.split("");
+revLowerLetters = revLowerLetters.reverse();
+revLowerLetters = revLowerLetters.join("");
+console.log(revLowerLetters); // 'zyxwvutsrqponmlkjihgfedcba'
+// or in one line with:
+// revLowerLetters = lowerLetters.split("").reverse().join("");
+```
+
 
