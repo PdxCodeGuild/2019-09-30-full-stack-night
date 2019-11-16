@@ -4,7 +4,25 @@ From the Python labs, redo Pick6, rot13, and the unit converter assignments in J
 
 Try not to look at your python code. It is tempting, but you'll get much more out of this if you make an effort to start fresh. If you do get hopelessly stuck though, go look.
 
-# pick6
+For rot13 and the unit converter, you'll need to install the [readline-sync](https://www.npmjs.com/package/readline-sync) package to get user input (nodejs is designed to deal with asynchronous tasks, which makes doing asynchronous things like these assignments a real pain). Type the following command into your terminal window to download and install readline-sync:
+
+```
+npm install readline-sync
+```
+
+after you have installed readline-sync, you need to "import" it using the following expression in your .js files:
+
+```javascript
+const readline = require('readline-sync');
+```
+
+You can now handle user input in a similar way to how it was done in python:
+```javascript
+let userInput = parseInt(readline.question('enter a number: '));
+console.log(`you entered: {${userInput}`);
+```
+
+# :notebook: pick6
 
 Have the computer play pick6 many times and determine net balance.
 
@@ -37,7 +55,7 @@ One function you might write is `pick6()` which will generate a list of 6 random
 
 The ROI (return on investment) is defined as `(earnings - expenses)/expenses`. Calculate your ROI, print it out along with your earnings and expenses.
 
-# rot13
+# :notebook: rot13
 
 Write a program that prompts the user for a string, and encodes it with ROT13. For each character, find the corresponding character, add it to an output string. Notice that there are 26 letters in the English language, so encryption is the same as decryption.
 
@@ -51,7 +69,8 @@ Write a program that prompts the user for a string, and encodes it with ROT13. F
 ## Version 2 (optional)
 
 Allow the user to input the amount of rotation used in the encryption / decryption.
-# unit converter
+
+# :notebook: unit converter
 
 
 This lab will involve writing a program that allows the user to convert a number between units.
