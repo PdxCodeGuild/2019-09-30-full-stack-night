@@ -20,3 +20,17 @@ def main():
         
 main()
 
+
+# import string
+
+# def rot13(message):
+#     print(message)
+#     rotation_amount = 13
+#     encoded_string = ''
+#     for char in message:
+#         if char in string.ascii_lowercase:
+#             index = string.ascii_lowercase.find(char)
+#             encoded_string += string.ascii_lowercase[(index + rotation_amount) % 26]
+#         else:
+#             encoded_string += char
+#     return encoded_string
