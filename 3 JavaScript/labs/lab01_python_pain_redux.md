@@ -164,6 +164,6 @@ enter the rotation: -13
 enter a string: vfa'g wninfpevcg whfg gur orfg? bayl 1337 unkbef hfr vg.
 isn't javascript just the best? only 1337 haxors use it.
 ```
-
+Spaces, punctuation, and numbers in the string should be preserved.
 
 
