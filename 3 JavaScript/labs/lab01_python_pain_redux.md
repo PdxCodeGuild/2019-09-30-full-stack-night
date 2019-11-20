@@ -153,17 +153,16 @@ Write a program that prompts the user for a string, and encodes it with ROT13. F
 
 ## Version 2 (this is more difficult in JS than in Python, just try it and do your best!)
 
-Allow the user to input the amount of rotation used in the encryption / decryption. Any string encrypted with a positive rotation, should be decrypted with a negative rotation. The output below demonstrates this:
+Allow the user to input the amount of rotation used in the encryption / decryption. They could enter 13, -9, 12985478439, or -578402365323509864 and your program should still function. Any string encrypted with a positive rotation, should be decrypted with a negative rotation. The output below demonstrates this:
 ```
-enter the rotation: 13
-enter a string: isn't javascript just the best? only 1337 haxors use it.
-vfa'g wninfpevcg whfg gur orfg? bayl 1337 unkbef hfr vg.
+enter the rotation: 32
+enter a string: here Is soMe ranDom sTRing 123@^$&#*(&%_#
+nkxk Oy yuSk xgtJus yZXotm 123@^$&#*(&%_#
 
-
-enter the rotation: -13
-enter a string: vfa'g wninfpevcg whfg gur orfg? bayl 1337 unkbef hfr vg.
-isn't javascript just the best? only 1337 haxors use it.
+enter the rotation: -32
+enter a string: nkxk Oy yuSk xgtJus yZXotm 123@^$&#*(&%_#
+here Is soMe ranDom sTRing 123@^$&#*(&%_#
 ```
-Spaces, punctuation, and numbers in the string should be preserved.
+Capital letters, spaces, punctuation, and numbers in the string should be preserved.
 
 
