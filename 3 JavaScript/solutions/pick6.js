@@ -3,7 +3,7 @@ function generateTicket() {
     high = 99;
     const ticket = [];
     for (let i = 0; i < 6; i++)
-        ticket.push(Math.floor(Math.random() * (1 + high - low)) + low);
+        ticket.push(Math.floor(Math.random() * (1 + high - low)) + low);    // see this explanation: https://teamtreehouse.com/community/mathfloor-mathrandom-max-min-1-min-explanation
     return ticket;
 }
 
