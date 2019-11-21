@@ -38,7 +38,7 @@ A third way is to use **listeners**. You can have multiple listeners for a singl
 
 ## Event Propagation
 
-You can see an example of event propagation on [javascript.info](https://javascript.info/bubbling-and-capturing) and [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Examples#Example_5:_Event_Propagation).
+You can see an example of event propagation on [javascript.info](https://javascript.info/bubbling-and-capturing) and [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Examples#Example_5:_Event_Propagation). This [site](https://javascript.info/bubbling-and-capturing) has a good example of event bubbling.
 
 
 - `event.stopPropagation()` prevents parent elements from receiving the event
