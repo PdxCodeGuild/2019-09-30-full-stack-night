@@ -1,7 +1,7 @@
 const readline = require('readline-sync');
 
 let rotation = parseInt(readline.question('enter the rotation: '));
-const answer = readline.question('enter a string: ');
+const userString = readline.question('enter a string: ');
 
 let lowerLetters = 'abcdefghijklmnopqrstuvwxyz';
 let upperLetters = lowerLetters.toUpperCase();
@@ -14,15 +14,15 @@ if (rotation < 0) {
     rotation = Math.abs(rotation);
 }
 
-for (i = 0; i < answer.length; i++) {
-    index = lowerLetters.indexOf(answer[i]);   
+for (i = 0; i < userString.length; i++) {
+    index = lowerLetters.indexOf(userString[i]);   
 
     if (index !== -1)
         convertedString += lowerLetters[(index + rotation) % 26];
     else if (index === -1) {
-        index = upperLetters.indexOf(answer[i]);
+        index = upperLetters.indexOf(userString[i]);
         if (index === -1)
-            convertedString += answer[i];
+            convertedString += userString[i];
         else
             convertedString += upperLetters[(index + rotation) % 26];
     }

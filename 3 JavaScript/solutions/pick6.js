@@ -29,18 +29,22 @@ function main() {
         6: 25000000,
     }
     
+
     let winnings = 0;
     let expenses = 0;
     let iter = 0;
     const MAX_ITER = 99999;
 
+
     const winner = generateTicket();
+
 
     while (iter <= MAX_ITER) {
         expenses += 2;
         winnings += prizes[compareTickets(winner, generateTicket())];
         iter++;
     }
+
 
     console.log(`\nwinnings: ${winnings}\nexpenses: ${expenses}\nroi: ${(winnings - expenses) / expenses}\n`)
 }
