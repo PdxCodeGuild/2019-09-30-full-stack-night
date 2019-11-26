@@ -1,4 +1,4 @@
-# maps
+# maps 🗺️
 
 Your assignment is to create a map displaying user information. You must us [leaflet](https://leafletjs.com/), [jsonplaceholder](https://jsonplaceholder.typicode.com/), and [axios](https://github.com/axios/axios). You may use more libraries to achieve whatever functionality you want, but I want to see that you can use at least these listed libraries and resources. The map I made and showed in class certainly was not pretty, but feel free to use CSS to improve the appearance of your own.
 
