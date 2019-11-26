@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#mapid {
+    margin: auto;
+    height: 400px;
+    width: 600px;
+}
+
+#info {
+    margin: auto;
+    margin-top: 25px;
+}
+
+.scrolling-wrapper-flexbox {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 600px;
+}
+
+#info-list {
+    list-style: none;
+}
