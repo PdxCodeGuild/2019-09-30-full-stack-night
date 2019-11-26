@@ -1,8 +1,8 @@
-# Extra Javascript Practice
-## Assignment
+# maps
+
 Your assignment is to create a map displaying user information. You must us [leaflet](https://leafletjs.com/), [jsonplaceholder](https://jsonplaceholder.typicode.com/), and [axios](https://github.com/axios/axios). You may use more libraries to achieve whatever functionality you want, but I want to see that you can use at least these listed libraries and resources. The map I made and showed in class certainly was not pretty, but feel free to use CSS to improve the appearance of your own.
 
-## Instructions
+## instructions
 Below are the high-level steps that you should be able to achieve. I'm keeping this at a high-level because I want you to fill in the details as you see fit. I think this is important for developing a feel for problem solving as well as developing your own style of coding. 
 
 You need to:
