@@ -1,0 +1,1 @@
+console.log('hey look js is in the thingy. doesn\'t that suck!?')
