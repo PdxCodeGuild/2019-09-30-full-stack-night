@@ -1,0 +1,58 @@
+{% extends 'base.html' %} {% block content %}
+<div class="url-list-container">
+  <h1 id="url-header">url info</h1>
+  <a id="list-links" href="{% url 'index' %}">back to shorty</a>
+
+  <table id="url-table">
+    <th>url</th>
+    <th>shortened url</th>
+    <th>date added</th>
+    <th>repeat addition attempts</th>
+    <th>number of clicks</th>
+    <th>ip of last click</th>
+    {% for url in url_list %}
+    <tr>
+      <td>{{ url.url }}</td>
+      <td>
+        <a href="http://localhost:8000/{{ url.url_hash }}" target="blank">http://localhost:8000/{{ url.url_hash }}</a>
+      </td>
+      <td>{{ url.date_added }}</td>
+      <td>{{ url.repeat_addition }}</td>
+      <td>{{ url.clicks }}</td>
+      <td>{{ url.last_ip }}</td>
+    </tr>
+    {% empty %}
+    <div>
+      there are no shortened urls in the database yet. or, there was an error
+      accessing the database.
+    </div>
+    {% endfor %}
+  </table>
+
+
+  <div>
+    {% if url_list.has_other_pages %}
+
+    {% if url_list.has_previous %}
+    <a href="?page={{ url_list.previous_page_number }}">&laquo;</a>
+    {% else %}
+    <span>&laquo;</span>
+    {% endif %}
+    {% for i in url_list.paginator.page_range %}
+    {% if url_list.number == i %}
+
+    <span>{{ i }} <span class="sr-only"></span></span>
+
+    {% else %}
+
+    <a href="?page={{ i }}">{{ i }}</a>
+
+    {% endif %} {% endfor %} {% if url_list.has_next %}
+    <a href="?page={{ urls.next_page_number }}">&raquo;</a>
+    {% else %}
+    <span>&raquo;</span>
+    {% endif %}
+
+    {% endif %}
+    {% endblock %}
+  </div>

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <p>title: {{ todo.title }}</p>
+    <p>description: {{ todo.text }}</p>
+    <p>created at: {{ todo.created_at }}</p>
+    <p>status: {{ todo.status }}</p>
+    <a href="http://localhost:8000/todos/mark/{{ todo.id }}">mark done</a>
+    <a href="http://localhost:8000/todos/update/{{ todo.id }}">update</a>
+    <a href="http://localhost:8000/todos/remove/{{ todo.id }}">remove</a>
+    <a href="http://localhost:8000/todos">back to list</a>
+
+{% endblock %}

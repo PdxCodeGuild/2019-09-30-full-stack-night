@@ -1,0 +1,53 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";
+
+html {    
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 60% 1fr;
+    grid-template-rows: 25% 25% auto 65%;
+    justify-items: center;
+    align-items: center;
+    width: 100%;    
+    height: 100vh;
+}
+
+#url-form {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+#hash-display {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.url-list-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#url-table td {
+    text-align: center;
+}
+
+#url-table th {
+    text-align: center;
+}
+
+
+/* #list-links {
+    justify-self: center;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+} */
