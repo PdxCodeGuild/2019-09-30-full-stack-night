@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container ">
+    <h1>{{ request.user }} dashboard</h1>
+
+    <div class="container">
+        <table class="u-full-width">
+            <th>table</th>
+            <th>author</th>
+            <th>status</th>
+            <th>due date</th>
+            {% for book in books %}
+            <tr id="{{ book.id }}">
+                <td>{{ book.book.title }}</td>
+                <td>{{ book.book.author }}</td>
+               
+                {% if book.is_overdue %}
+                <td> {{ book.due_back }} <span style="float:right;"><i class=" return fas overdue fa-poop"></i></span></td>
+                {% else %}
+                <td> {{ book.due_back }} <span style="float:right;"><i class="  return fas fa-book"></i></span></td>
+                {% endif %}
+
+
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+    {% endblock %}

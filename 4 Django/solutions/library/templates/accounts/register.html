@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <form action="{% url 'register' %}" method="POST">
+        {% csrf_token %}
+        <div class="row">
+            <div class="six columns">
+                <label for="first_name">first name</label>
+                <input class="u-full-width" type="text" placeholder="first name" name="first_name" id="first_name" 
+                value="{{first_name}}">
+            </div>
+            <div class="six columns">
+                <label for="last">last name</label>
+                <input class="u-full-width" type="text" placeholder="last name" name="last_name" id="last" 
+                value="{{last_name}}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns">
+                <label for="email">email</label>
+                <input class="u-full-width" type="email" placeholder="moo@cow.mil" name="email" id="email"
+                value="{{email}}">>
+            </div>
+            <div class="six columns">
+                <label for="username">username</label>
+                <input class="u-full-width" type="text" placeholder="username" name="username" id="username"
+                value="{{username}}">>
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns">
+                <label for="password">password</label>
+                <input class="u-full-width" type="password" placeholder="password" name="password" id="password">
+            </div>
+            <div class="six columns">
+                <label for="password2">confirm password</label>
+                <input class="u-full-width" type="password" placeholder="confirm password" name="password2" id="password2">
+            </div>
+        </div>
+        <input class="button-primary" type="submit" value="Submit">
+    </form>
+</div>
+<!-- Always wrap checkbox and radio inputs in a label and use a <span class="label-body"> inside of it -->
+
+<!-- Note: The class .u-full-width is just a utility class shorthand for width: 100% -->
+
+{% endblock %}

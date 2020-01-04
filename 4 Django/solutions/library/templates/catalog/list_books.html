@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="container">
+    <table class="u-full-width">
+        <th>table</th>
+        <th>author</th>
+        <th>status</th>
+        <th>due date</th>
+        {% for book in books %}
+        <tr id= "{{ book.id }}">
+            <td>{{ book.book.title }}</td>
+            <td>{{ book.book.author }}</td>
+            <td>{{ status }} </td>
+
+            {% if book.is_overdue %}
+                 <td> {{ due_back }} <span style="float:right;"><i class="fas overdue fa-book"></i></span></td>
+            {% elif  book.status == 'a' %}
+                <td> {{ due_back }} <span style="float:right;"><i class=" fas available  fa-book"></i></span></td>
+            {% elif book.status == 'o' %}
+                <td> {{ due_back }} <span style="float:right;"><i class=" fas onloan  fa-question"></i></span></td>
+            {% else %}
+                 <td> {{ due_back }} <span style="float:right;"><i class="fas fa-book"></i></span></td>
+            {% endif %}
+
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</div>
+
+{%endblock%}

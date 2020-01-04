@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+        <form action="{% url 'login' %}" method="POST">
+            {% csrf_token %}
+            <div class="row">
+                <div class="six columns">
+                    <label for="username">username</label>
+                    <input class="u-full-width" type="text" placeholder="username" id="username" name = 'username'>
+                </div>
+                <div class="six columns">
+                    <label for="password">password</label>
+                    <input class="u-full-width" type="password" placeholder="password" id="password" name = 'password'>
+                </div>
+            </div>
+            <input class="button-primary" type="submit" value="Submit">
+        </form>
+    </div>
+
+{% endblock %}

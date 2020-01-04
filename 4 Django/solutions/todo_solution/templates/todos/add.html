@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<form action="http://localhost:8000/todos/add/" method="POST">
+<form action="{% url 'add' %}" method="POST">
     {% csrf_token %}
     title: <br> <input type="text" name="title" placeholder="enter todo title"><br>
     description:<br> <textarea name="text" id="" cols="30" rows="10">type todo description here</textarea><br>

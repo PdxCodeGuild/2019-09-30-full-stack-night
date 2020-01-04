@@ -1,0 +1,20 @@
+<div class="container">
+<div class="two columns">
+    <h1>DS</h1>
+</div>
+
+<div id="nav" class="ten columns">
+    <ul>
+        <li><a href="{% url 'index' %}">home</a></li>
+        <li><a href="{% url 'about' %}">about</a></li>
+        {% if user.is_authenticated %}
+        <li><a href="#">view library</a></li>
+        <li><a href="{% url 'dashboard' %}">dashboard ({{request.user}})</a></li>
+        <li><a href="{% url 'logout' %}">logout</a></li>
+        {% else %}
+        <li><a href="{% url 'register' %}">register</a></li>
+        <li><a href="{% url 'login' %}">login</a></li>
+        {% endif%}
+    </ul>
+</div>
+</div>
