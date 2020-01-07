@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<a href="http://localhost:8000/accounts/login">login</a>
+<a href="http://localhost:8000/todos/add">add task</a>
+<a href="http://localhost:8000/users/profile">profile</a>
+<a href="http://localhost:8000/accounts/logout">logout</a>
+<ul>
+    {% for todo in todos %}
+        <li><a href="http://localhost:8000/todos/details/{{ todo.id }}">{{ todo.title }}</a></li>
+        <p>{{ todo.text }}</p>
+    {% empty %}
+        <p>you have nothing to do.</p>
+    {% endfor %}
+</ul>
+{% endblock %}
