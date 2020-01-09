@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+        <form action="{% url 'upload' %}" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <input class="file-input" type="file" name="image_file"><br>
+          <input type="submit" value="Submit" class="button is-primary" />
+        </form>
+        <br><br>
+        {% for image in images %}
+          <a href="{{ image.file.url }}"><img class="user-img" src="{{ image.file.url }}" alt=""></a><br>
+          <a href="{% url 'delete' image.id %}">delete image</a><br>
+        {% empty %}
+          no images to display
+        {%endfor %}
+      </div>
+    </div>
+
+{% endblock %}

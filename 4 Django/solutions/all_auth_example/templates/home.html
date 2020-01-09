@@ -1,0 +1,8 @@
+{% load socialaccount %}
+
+<h1>django allauth example</h1>
+{% if user.is_authenticated %}
+    <p>hello, {{ user.username }}. it's a cruel world, is it not?</p>
+{% else %}
+    <a href="{% provider_login_url 'github' %}">sign up</a>
+{% endif %}
