@@ -25,15 +25,17 @@ def details(request, id):
 
 # view add a todo to the database. this view handles both GET and POST HTTP requests
 def add_todo(request):
-    if request.method == 'GET':
+    if request.method == 'GET': # if its a GET request, just display the todos/add.html template
         return render(request, 'todos/add.html')
-    elif request.method == 'POST':
-        title = request.POST['title']
-        text = request.POST['text']
-        if (request.POST['status'] == 'False'):
+    elif request.method == 'POST': # if it's a POST request ...
+        title = request.POST['title']   # get the title from the POST submission, this comes form a form
+        text = request.POST['text']     # get the text from the POST submission, this comes form a form
+        if (request.POST['status'] == 'False'): # check the status because it's a string and booleans are not strings
             status = False
         else:
             status = True
+        # add the new todo to the databse. objects.create() automatically saves the new todo for us so we
+        # don't need a separate call to the save() method
         todo = Todo.objects.create(title = title, text = text, status = status)
         return redirect('list')
 
