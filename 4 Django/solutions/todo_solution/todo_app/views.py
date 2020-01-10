@@ -7,11 +7,13 @@ from .models import Todo
 # view to get all of the todos from the database and send them to the 'todos/list.html' view
 def todo_list(request):
     todos = Todo.objects.all()  # get all of the todos from the database and store them in todos
+
+    # create the context dictionary to send the todos to the template
     context = {
         'todos': todos
     }
 
-    return render(request, 'todos/list.html', context)
+    return render(request, 'todos/list.html', context) # context is sent to 'todos/list.html'
 
 
 # view to get retrieve a specific todo from the database and send it to the 'todos/detail.html' view
